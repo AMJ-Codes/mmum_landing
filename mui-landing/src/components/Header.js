@@ -4,6 +4,9 @@ import { AppBar, Collapse, IconButton, Toolbar } from '@material-ui/core';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import SortIcon from '@material-ui/icons/Sort';
 
+var names = ["stargazers", "astronomers", "moon lovers", "constellation seekers", "celestial navigators"];
+var randNames = names[Math.floor(Math.random() * names.length)]; 
+
 const useStyles = makeStyles((theme) => ({
     root: {
         display: 'flex',
@@ -65,8 +68,8 @@ export default function Header() {
         >
         <div className={classes.container}>
             <h1 className={classes.title}> 
-                Welcome to <br /> {''}
-            <span className={classes.colorText}>our website!</span>
+                Find fellow <br /> {''}
+            <span className={classes.colorText}>{randNames}!</span>
             </h1>
             <IconButton>
                 <ExpandMoreIcon className={classes.goDown} />
@@ -76,3 +79,6 @@ export default function Header() {
     </div>
     );
 }
+
+/* var names = ["stargazers!", "astronomers!", "moon lovers!"];
+var randColor = names[Math.floor(Math.random() * names.length)]; */
